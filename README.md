@@ -13,7 +13,7 @@ The velocity version based on
 ```xml
 <dependency>
     <groupId>com.kalman03</groupId>
-	<artifactId>velocity-spring-boot-starter</artifactId>
+    <artifactId>velocity-spring-boot-starter</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
@@ -61,3 +61,6 @@ spring.velocity.layoutUrl=layout.vm
 </tools>
 ```
 
+### License
+
+velocity-spring-boot-starter is released under the [Apache 2.0 license](https://github.com/51wakeup/wakeup-qcloud-sdk/blob/master/LICENSE).
