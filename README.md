@@ -63,4 +63,4 @@ spring.velocity.layoutUrl=layout.vm
 
 ### License
 
-velocity-spring-boot-starter is released under the [Apache 2.0 license](https://github.com/51wakeup/wakeup-qcloud-sdk/blob/master/LICENSE).
+velocity-spring-boot-starter is released under the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0).
