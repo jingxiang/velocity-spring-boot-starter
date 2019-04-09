@@ -565,7 +565,7 @@ public class VelocityView extends AbstractTemplateView {
 		try {
 			template.merge(context, response.getWriter());
 		} catch (MethodInvocationException ex) {
-			Throwable cause = ex.getWrappedThrowable();
+			Throwable cause = ex.getCause();
 			throw new NestedServletException("Method invocation failed during rendering of Velocity view with name '"
 					+ getBeanName() + "': " + ex.getMessage() + "; reference [" + ex.getReferenceName() + "], method '"
 					+ ex.getMethodName() + "'", cause == null ? ex : cause);
@@ -581,6 +581,7 @@ public class VelocityView extends AbstractTemplateView {
 	 */
 	private static class LocaleAwareDateTool extends DateTool {
 
+		private static final long serialVersionUID = -9158453025041442103L;
 		private final HttpServletRequest request;
 
 		public LocaleAwareDateTool(HttpServletRequest request) {
@@ -607,6 +608,7 @@ public class VelocityView extends AbstractTemplateView {
 	 */
 	private static class LocaleAwareNumberTool extends NumberTool {
 
+		private static final long serialVersionUID = -3032034473213963892L;
 		private final HttpServletRequest request;
 
 		public LocaleAwareNumberTool(HttpServletRequest request) {
