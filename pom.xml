@@ -2,11 +2,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.kalman03</groupId>
+	<groupId>com.bushangbuxia</groupId>
 	<artifactId>velocity-spring-boot-starter</artifactId>
 	<packaging>jar</packaging>
+	
 	<version>1.0.0</version>
 	<name>velocity-spring-boot-starter</name>
+	<description>A velocity spring boot starter to support spring boot 1.5+</description>
+	<url>https://github.com/jingxiang/velocity-spring-boot-starter</url>
+
+	<scm>
+		<url>https://github.com/jingxiang/velocity-spring-boot-starter.git</url>
+	</scm>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>kalman03</name>
+			<email>kalman03@163.com</email>
+			<organization>bushangbuxia</organization>
+			<organizationUrl>http://www.bushangbuxia.com</organizationUrl>
+		</developer>
+	</developers>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -52,36 +75,15 @@
 	</dependencies>
 
 	<distributionManagement>
-		<repository>
-			<id>sonatype-release</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
 		<snapshotRepository>
-			<id>sonatype-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>sonatype_snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
 		</snapshotRepository>
+		<repository>
+			<id>sonatype_release</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
 	</distributionManagement>
-
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
-	<scm>
-		<tag>master</tag>
-		<url>git@github.com:jingxiang/velocity-spring-boot-starter.git</url>
-		<connection>scm:git:git@github.com:jingxiang/velocity-spring-boot-starter.git</connection>
-		<developerConnection>scm:git:git@github.com:jingxiang/velocity-spring-boot-starter.git</developerConnection>
-	</scm>
-	<developers>
-		<developer>
-			<name>kalman03</name>
-			<email>kalman03@163.com</email>
-		</developer>
-	</developers>
 
 	<build>
 		<finalName>${project.name}</finalName>
@@ -105,7 +107,21 @@
 				</configuration>
 				<executions>
 					<execution>
-						<phase>compile</phase>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
 						<goals>
 							<goal>jar</goal>
 						</goals>
@@ -115,7 +131,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.6</version>
+				<version>1.5</version>
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>
@@ -125,6 +141,17 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.8</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>sonatype_release</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

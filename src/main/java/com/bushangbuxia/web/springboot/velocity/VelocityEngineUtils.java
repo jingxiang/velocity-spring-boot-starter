@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity;
+package com.bushangbuxia.web.springboot.velocity;
 
 import java.io.StringWriter;
 import java.io.Writer;

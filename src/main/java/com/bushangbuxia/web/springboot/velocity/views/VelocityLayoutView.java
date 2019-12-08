@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity.views;
+package com.bushangbuxia.web.springboot.velocity.views;
 
 import java.io.StringWriter;
 import java.util.Locale;

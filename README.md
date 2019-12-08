@@ -12,7 +12,7 @@ The velocity version based on
 
 ```xml
 <dependency>
-    <groupId>com.kalman03</groupId>
+    <groupId>com.bushangbuxia</groupId>
     <artifactId>velocity-spring-boot-starter</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -21,7 +21,7 @@ The velocity version based on
 2.Add scan base packages 
 
 ```java
-@SpringBootApplication(scanBasePackages={"com.kalman03.web.springboot.velocity"})
+@SpringBootApplication(scanBasePackages={"com.bushangbuxia.web.springboot.velocity"})
 ```
 
 

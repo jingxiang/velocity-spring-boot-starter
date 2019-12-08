@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity;
+package com.bushangbuxia.web.springboot.velocity;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
-import com.kalman03.web.springboot.velocity.views.VelocityConfigurer;
+import com.bushangbuxia.web.springboot.velocity.views.VelocityConfigurer;
 
 /**
  * Factory that configures a VelocityEngine. Can be used standalone,
@@ -69,10 +69,12 @@ public class VelocityEngineFactory {
 	private boolean preferFileSystemAccess = true;
 
 	/**
-	 * Set the location of the Velocity config file.
-	 * Alternatively, you can specify all properties locally.
+	 * Set the location of the Velocity config file. Alternatively, you can specify
+	 * all properties locally.
+	 * 
 	 * @see #setVelocityProperties
 	 * @see #setResourceLoaderPath
+	 * @param configLocation configLocation
 	 */
 	public void setConfigLocation(Resource configLocation) {
 		this.configLocation = configLocation;
@@ -89,6 +91,7 @@ public class VelocityEngineFactory {
 	 * @see #setVelocityPropertiesMap
 	 * @see #setConfigLocation
 	 * @see #setResourceLoaderPath
+	 * @param velocityProperties velocityProperties
 	 */
 	public void setVelocityProperties(Properties velocityProperties) {
 		CollectionUtils.mergePropertiesIntoMap(velocityProperties, this.velocityProperties);
@@ -98,6 +101,7 @@ public class VelocityEngineFactory {
 	 * Set Velocity properties as Map, to allow for non-String values
 	 * like "ds.resource.loader.instance".
 	 * @see #setVelocityProperties
+	 * @param velocityPropertiesMap velocityPropertiesMap
 	 */
 	public void setVelocityPropertiesMap(Map<String, Object> velocityPropertiesMap) {
 		if (velocityPropertiesMap != null) {
@@ -131,6 +135,7 @@ public class VelocityEngineFactory {
 	 * @see #setPreferFileSystemAccess
 	 * @see SpringResourceLoader
 	 * @see org.apache.velocity.runtime.resource.loader.FileResourceLoader
+	 * @param resourceLoaderPath resourceLoaderPath
 	 */
 	public void setResourceLoaderPath(String resourceLoaderPath) {
 		this.resourceLoaderPath = resourceLoaderPath;
@@ -142,6 +147,8 @@ public class VelocityEngineFactory {
 	 * ApplicationContext if running in a context.
 	 * @see org.springframework.core.io.DefaultResourceLoader
 	 * @see org.springframework.context.ApplicationContext
+	 * @param resourceLoader resourceLoader
+	 * 
 	 */
 	public void setResourceLoader(ResourceLoader resourceLoader) {
 		this.resourceLoader = resourceLoader;
@@ -165,6 +172,7 @@ public class VelocityEngineFactory {
 	 * be necessary if some of your templates reside in an expanded classes
 	 * directory while others reside in jar files.
 	 * @see #setResourceLoaderPath
+	 * @param preferFileSystemAccess preferFileSystemAccess
 	 */
 	public void setPreferFileSystemAccess(boolean preferFileSystemAccess) {
 		this.preferFileSystemAccess = preferFileSystemAccess;
@@ -172,6 +180,7 @@ public class VelocityEngineFactory {
 
 	/**
 	 * Return whether to prefer file system access for template loading.
+	 * @return boolean
 	 */
 	protected boolean isPreferFileSystemAccess() {
 		return this.preferFileSystemAccess;

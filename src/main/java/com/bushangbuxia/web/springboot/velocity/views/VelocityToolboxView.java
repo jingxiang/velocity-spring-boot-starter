@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity.views;
+package com.bushangbuxia.web.springboot.velocity.views;
 
 /*
  * Copyright 2002-2010 the original author or authors.

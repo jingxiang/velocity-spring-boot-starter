@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity.views;
+package com.bushangbuxia.web.springboot.velocity.views;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.web.context.ServletContextAware;
 
-import com.kalman03.web.springboot.velocity.VelocityEngineFactory;
+import com.bushangbuxia.web.springboot.velocity.VelocityEngineFactory;
 
 /**
  * JavaBean to configure Velocity for web usage, via the "configLocation"

@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity;
+package com.bushangbuxia.web.springboot.velocity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,8 +6,8 @@ import java.util.Map;
 import org.springframework.boot.autoconfigure.template.AbstractTemplateViewResolverProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import com.kalman03.web.springboot.velocity.views.EmbeddedVelocityViewResolver;
-import com.kalman03.web.springboot.velocity.views.VelocityViewResolver;
+import com.bushangbuxia.web.springboot.velocity.views.EmbeddedVelocityViewResolver;
+import com.bushangbuxia.web.springboot.velocity.views.VelocityViewResolver;
 /**
  * @since 2017年4月20日
  * @author kalman03

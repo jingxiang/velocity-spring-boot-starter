@@ -1,4 +1,4 @@
-package com.kalman03.web.springboot.velocity.views;
+package com.bushangbuxia.web.springboot.velocity.views;
 
 import org.springframework.web.servlet.view.AbstractUrlBasedView;
 
