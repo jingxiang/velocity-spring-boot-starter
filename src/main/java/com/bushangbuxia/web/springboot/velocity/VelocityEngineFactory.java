@@ -23,9 +23,7 @@ import com.bushangbuxia.web.springboot.velocity.views.VelocityConfigurer;
 /**
  * Factory that configures a VelocityEngine. Can be used standalone,
  * but typically you will either use {@link VelocityEngineFactoryBean}
- * for preparing a VelocityEngine as bean reference, or
- * {@link org.springframework.web.servlet.view.velocity.VelocityConfigurer}
- * for web views.
+ * for preparing a VelocityEngine as bean reference
  *
  * <p>The optional "configLocation" property sets the location of the Velocity
  * properties file, within the current application. Velocity properties can be
@@ -38,17 +36,11 @@ import com.bushangbuxia.web.springboot.velocity.views.VelocityConfigurer;
  *
  * <p>If "overrideLogging" is true (the default), the VelocityEngine will be
  * configured to log via Commons Logging, that is, using
- * {@link CommonsLogLogChute} as log system.
- *
- * <p>The simplest way to use this class is to specify a
- * {@link #setResourceLoaderPath(String) "resourceLoaderPath"}; the
- * VelocityEngine typically then does not need any further configuration.
  *
  * @author Juergen Hoeller
  * @see #setConfigLocation
  * @see #setVelocityProperties
  * @see #setResourceLoaderPath
- * @see #setOverrideLogging
  * @see #createVelocityEngine
  * @see VelocityEngineFactoryBean
  * @see VelocityConfigurer
@@ -156,6 +148,7 @@ public class VelocityEngineFactory {
 
 	/**
 	 * Return the Spring ResourceLoader to use for loading Velocity template files.
+	 * @return {@link ResourceLoader}
 	 */
 	protected ResourceLoader getResourceLoader() {
 		return this.resourceLoader;

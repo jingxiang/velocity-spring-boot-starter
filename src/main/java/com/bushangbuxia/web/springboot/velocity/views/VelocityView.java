@@ -154,6 +154,8 @@ public class VelocityView extends AbstractTemplateView {
 	 * @see org.apache.velocity.tools.generic.DateTool
 	 * @see org.springframework.web.servlet.support.RequestContextUtils#getLocale
 	 * @see org.springframework.web.servlet.LocaleResolver
+	 * 
+	 * @param dateToolAttribute dateToolAttribute
 	 */
 	public void setDateToolAttribute(String dateToolAttribute) {
 		this.dateToolAttribute = dateToolAttribute;
@@ -171,6 +173,7 @@ public class VelocityView extends AbstractTemplateView {
 	 * @see org.apache.velocity.tools.generic.NumberTool
 	 * @see org.springframework.web.servlet.support.RequestContextUtils#getLocale
 	 * @see org.springframework.web.servlet.LocaleResolver
+	 * @param numberToolAttribute numberToolAttribute
 	 */
 	public void setNumberToolAttribute(String numberToolAttribute) {
 		this.numberToolAttribute = numberToolAttribute;
@@ -182,6 +185,8 @@ public class VelocityView extends AbstractTemplateView {
 	 * <p>
 	 * Specify the encoding in the VelocityEngine rather than per template if all
 	 * your templates share a common encoding.
+	 * 
+	 * @param encoding encoding
 	 */
 	public void setEncoding(String encoding) {
 		this.encoding = encoding;
@@ -189,6 +194,8 @@ public class VelocityView extends AbstractTemplateView {
 
 	/**
 	 * Return the encoding for the Velocity template.
+	 * 
+	 * @return encoding
 	 */
 	protected String getEncoding() {
 		return this.encoding;
@@ -202,6 +209,8 @@ public class VelocityView extends AbstractTemplateView {
 	 * <p>
 	 * Note that this is a minor optimization only, as Velocity itself caches
 	 * templates in a modification-aware fashion.
+	 * 
+	 * @param cacheTemplate cacheTemplate
 	 */
 	public void setCacheTemplate(boolean cacheTemplate) {
 		this.cacheTemplate = cacheTemplate;
@@ -209,6 +218,8 @@ public class VelocityView extends AbstractTemplateView {
 
 	/**
 	 * Return whether the Velocity template should be cached.
+	 * 
+	 * @return cacheTemplate
 	 */
 	protected boolean isCacheTemplate() {
 		return this.cacheTemplate;
@@ -221,6 +232,7 @@ public class VelocityView extends AbstractTemplateView {
 	 * expected in the current web application context, with any bean name.
 	 * 
 	 * @see VelocityConfig
+	 * @param velocityEngine velocityEngine
 	 */
 	public void setVelocityEngine(VelocityEngine velocityEngine) {
 		this.velocityEngine = velocityEngine;
@@ -228,6 +240,8 @@ public class VelocityView extends AbstractTemplateView {
 
 	/**
 	 * Return the VelocityEngine used by this view.
+	 * 
+	 * @return velocityEngine
 	 */
 	protected VelocityEngine getVelocityEngine() {
 		return this.velocityEngine;
@@ -275,6 +289,8 @@ public class VelocityView extends AbstractTemplateView {
 	 * <p>
 	 * Can be overridden to customize the behavior, for example in case of multiple
 	 * templates to be rendered into a single view.
+	 * 
+	 * @param locale locale
 	 */
 	@Override
 	public boolean checkResource(Locale locale) throws Exception {
@@ -350,7 +366,6 @@ public class VelocityView extends AbstractTemplateView {
 	 * @throws Exception if there's a fatal error while creating the context
 	 * @see #createVelocityContext(Map)
 	 * @see #initTool
-	 * @see org.apache.velocity.tools.view.context.ChainedContext
 	 * @see VelocityToolboxView
 	 */
 	protected Context createVelocityContext(Map<String, Object> model, HttpServletRequest request,
@@ -476,8 +491,6 @@ public class VelocityView extends AbstractTemplateView {
 	 * @param velocityContext the Velocity context
 	 * @throws Exception if initializion of the tool failed
 	 * @see #createVelocityContext
-	 * @see org.apache.velocity.tools.view.context.ViewContext
-	 * @see org.apache.velocity.tools.view.context.ChainedContext
 	 * @see VelocityToolboxView
 	 */
 	protected void initTool(Object tool, Context velocityContext) throws Exception {

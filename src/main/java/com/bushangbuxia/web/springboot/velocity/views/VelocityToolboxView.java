@@ -60,8 +60,6 @@ import org.springframework.util.ReflectionUtils;
  * @since 1.1.3
  * @see #setToolboxConfigLocation
  * @see #initTool
- * @see org.apache.velocity.tools.view.context.ViewContext
- * @see org.apache.velocity.tools.view.context.ChainedContext
  */
 // @deprecated as of Spring 4.3, in favor of FreeMarker
 public class VelocityToolboxView extends VelocityView {
@@ -77,14 +75,15 @@ public class VelocityToolboxView extends VelocityView {
 	 * <p>The specified location string needs to refer to a ServletContext
 	 * resource, as expected by ServletToolboxManager which is part of
 	 * the view package of Velocity Tools.
-	 * @see org.apache.velocity.tools.view.servlet.ServletToolboxManager#getInstance
+	 * @param toolboxConfigLocation toolboxConfigLocation
 	 */
 	public void setToolboxConfigLocation(String toolboxConfigLocation) {
 		this.toolboxConfigLocation = toolboxConfigLocation;
 	}
 
 	/**
-	 * Return the Velocity Toolbox config location, if any.
+	 *  Return the Velocity Toolbox config location, if any.
+	 * @return toolboxConfigLocation
 	 */
 	protected String getToolboxConfigLocation() {
 		return this.toolboxConfigLocation;
