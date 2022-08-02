@@ -1,0 +1,37 @@
+{
+	"groups": [
+		{
+			"name": "spring.velocity",
+			"type": "com.kalman03.springboot.velocity.VelocityProperty",
+			"sourceType": "com.kalman03.springboot.velocity.VelocityProperty"
+		}
+	],
+	"properties": [
+		{
+			"name": "spring.velocity.enabled",
+			"type": "java.lang.Boolean",
+			"description": "启用Velocity模板"
+		},
+		{
+			"name": "spring.velocity.resource-loader-path",
+			"type": "java.lang.String",
+			"sourceType": "com.kalman03.springboot.velocity.VelocityProperty",
+			"sourceMethod": "getResourceLoaderPath()",
+			"description": "Velocity模板文件根路径"
+		},
+		{
+			"name": "spring.velocity.suffix",
+			"type": "java.lang.String",
+			"sourceType": "com.kalman03.springboot.velocity.VelocityProperty",
+			"sourceMethod": "getSuffix()",
+			"description": "Velocity模板文件后缀名称"
+		},
+		{
+			"name": "spring.velocity.layout-url",
+			"type": "java.lang.String",
+			"sourceType": "com.kalman03.springboot.velocity.VelocityProperty",
+			"sourceMethod": "getLayoutUrl()",
+			"description": "Velocity所有页面的默认模板"
+		}
+	]
+}
