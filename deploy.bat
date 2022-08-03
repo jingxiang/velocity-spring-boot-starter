@@ -1,0 +1,1 @@
+call mvnd deploy -Prelease

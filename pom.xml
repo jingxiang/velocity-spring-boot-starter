@@ -7,10 +7,10 @@
 	<groupId>com.kalman03</groupId>
 	<artifactId>velocity-spring-boot-starter</artifactId>
 
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0-M4</version>
 	<name>velocity-spring-boot-starter</name>
 	<description>velocity-spring-boot-starter</description>
-
+	<url>https://github.com/jingxiang/velocity-spring-boot-starter</url>
 	<properties>
 		<java.version>17</java.version>
 		<springboot.version>3.0.0-M4</springboot.version>
@@ -18,7 +18,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-	
+	<scm>
+		<url>https://github.com/jingxiang/velocity-spring-boot-starter.git</url>
+	</scm>
+	<licenses>
+		<license>
+			<name>Apache License Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
 	<developers>
 		<developer>
 			<name>kalman03</name>
