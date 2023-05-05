@@ -21,8 +21,6 @@ import com.kalman03.springboot.velocity.view.VelocityViewResolver;
 import jakarta.servlet.Servlet;
 
 @Configuration
-@ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
-@ConditionalOnClass({ Servlet.class })
 @AutoConfigureAfter(WebMvcAutoConfiguration.class)
 public class VelocityAutoConfiguration {
 	
