@@ -14,7 +14,7 @@ The velocity version based on
 <dependency>
     <groupId>com.kalman03</groupId>
     <artifactId>velocity-spring-boot-starter</artifactId>
-    <version>3.0.0-M4</version>
+    <version>3.2.0</version>
 </dependency>
 ```
 
