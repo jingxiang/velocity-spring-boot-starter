@@ -7,13 +7,13 @@
 	<groupId>com.kalman03</groupId>
 	<artifactId>velocity-spring-boot-starter</artifactId>
 
-	<version>3.1.0</version>
+	<version>3.2.0</version>
 	<name>velocity-spring-boot-starter</name>
 	<description>velocity-spring-boot-starter</description>
 	<url>https://github.com/jingxiang/velocity-spring-boot-starter</url>
 	<properties>
 		<java.version>17</java.version>
-		<springboot.version>3.0.6</springboot.version>
+		<springboot.version>3.1.1</springboot.version>
 		<velocity.version>2.3</velocity.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -60,43 +60,6 @@
 			<version>${springboot.version}</version>
 		</dependency>
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
-			<url>https://repo.spring.io/snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
-			<url>https://repo.spring.io/snapshot</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<distributionManagement>
 		<snapshotRepository>
